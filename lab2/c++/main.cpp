@@ -10,4 +10,5 @@ int main() {
         cout << "There is no such points";
     }
     system("pause");
+    return 0;
 }
