@@ -1,5 +1,3 @@
-import math
-
 x = float(input())
 y = float(input())
 
@@ -10,3 +8,4 @@ if (x*x + y*y <=1):
         print("I didn't find your point")
 else:
     print("I didn't find your point")
+    
