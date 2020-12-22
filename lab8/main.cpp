@@ -74,5 +74,5 @@ void create_x (int **matrix, int n, int m) {
             }
         }
     }
-    print_array(x, m);
+    print_array(x, n);
 }
