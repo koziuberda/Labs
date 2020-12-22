@@ -4,7 +4,8 @@ using namespace std;
 
 int** init_matrix(int *n, int *m); //создает матрицу m*n
 void print_matrix(int **matrix, int n, int m);//печатает
-void print_array(int *array, int length);//выводит массив
+template <typename T>
+void print_array(T *array, int length);//выводит массив
 double average(int *array, int length);//вычисляет ср.арифметическое массива
 void create_x (int **matrix, int n, int m);//создает и выводит X(n)
 
@@ -41,9 +42,10 @@ void print_matrix(int **matrix, int n, int m) {
     cout << endl;
 }
 
-void print_array(int *array, int length) {
+template <typename T>
+void print_array(T *array, int length) {
     for (int i = 0; i < length; i++)
-        cout << setw(3) << array[i];
+        cout << setw(3) << array[i] << " ";
     cout << endl;
 }
 
@@ -72,7 +74,5 @@ void create_x (int **matrix, int n, int m) {
             }
         }
     }
-    for (int i = 0; i < n; i++){
-        cout << x[i] << " ";
-    }
+    print_array(x, m);
 }
